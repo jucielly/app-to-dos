@@ -1,34 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Aplicação de To-dos</title>
 </head>
+
 <body>
     <header>
-       <h1>Lista de To-dos</h1>
+        <h1>Lista de To-dos</h1>
     </header>
     <section>
         <div id="app">
-            <ul>
-                <li>Estudar Javascript 
-                        <a href="#">excluir</a>
-                </li>
-                <li>Comer um bolinho
-                        <a href="#">excluir</a>
-                </li>
-                <li>Ir para a academia
-                        <a href="#">excluir</a>
-                </li>
-            </ul>
+            <ul id="lista-to-dos"></ul>
         </div>
-        <input type="text" placeholder="Próximo to-do">
-        <button>Adicionar</button>
+        <input type="text" placeholder="Próximo to-do" id="adicionar-um-toDo">
+        <button type="button" id="add-button">Adicionar</button>
     </section>
 
 
     <script src="main.js"></script>
 </body>
+
 </html>
