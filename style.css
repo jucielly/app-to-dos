@@ -1,0 +1,37 @@
+html{
+text-align: center;
+background-color: #EEEBD0;
+}
+
+.lista {
+    font-size: 20px;
+    list-style-type: none;
+    margin: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.excluir {
+    font-size: 15px;
+    margin: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.input {
+    color: #35393C;
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.botaos {
+    color: #35393C;
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #EEEBD0;
+}
+
+.titulo-principal {
+font-size: 45px;
+font-family: 'Dancing Script', cursive;
+}

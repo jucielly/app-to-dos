@@ -10,10 +10,19 @@ function renderizarToDos() {
     toDoUl.innerHTML = ""
     for (todo of todos) {
         let todoElement = document.createElement("li")
+        todoElement.setAttribute("class","lista")
         let todoText = document.createTextNode(todo)
+        let linkelemnt = document.createElement("a")
+        linkelemnt.setAttribute("href", "#")
+        let linkText = document.createTextNode("Excluir")
 
+        var pos = todos.indexOf(todo)
+        linkelemnt.setAttribute("onclick","removerToDos("+pos+")")
+        linkelemnt.setAttribute("class","excluir")
 
+        linkelemnt.appendChild(linkText)
         todoElement.appendChild(todoText)
+        todoElement.appendChild(linkelemnt)
         toDoUl.appendChild(todoElement)
     }
 
@@ -32,3 +41,9 @@ function adicionarToDos() {
 }
 
 toDoButoon.onclick = adicionarToDos
+
+
+function removerToDos (pos) {
+ todos.splice(pos,1)
+ renderizarToDos()
+}
