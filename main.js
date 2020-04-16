@@ -3,7 +3,7 @@ let inputToDo = document.getElementById("adicionar-um-toDo")
 let toDoButoon = document.getElementById("add-button")
 
 
-let todos = ["Estudar javascript", "Ir para a academia", "Comer um Bolinho"]
+let todos = JSON.parse(localStorage.getItem("list_todos"))
 
 
 function renderizarToDos() {
@@ -38,6 +38,7 @@ function adicionarToDos() {
     todos.push(todoText)
     inputToDo.value = ""
     renderizarToDos()
+    saveToStorage()
 }
 
 toDoButoon.onclick = adicionarToDos
@@ -46,4 +47,10 @@ toDoButoon.onclick = adicionarToDos
 function removerToDos (pos) {
  todos.splice(pos,1)
  renderizarToDos()
+ saveToStorage()
+}
+
+
+function saveToStorage() {
+  localStorage.setItem("list_todos",JSON.stringify(todos))
 }
